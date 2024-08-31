@@ -1,0 +1,10 @@
+<div>
+    <h2>Current Champion</h2>
+    <div *ngIf="champions.length">
+      <p>{{ champions[0].name }} ({{ champions[0].title }})</p>
+    </div>
+    <div *ngIf="!champions.length">
+      <p>No champion currently</p>
+    </div>
+  </div>
+  
