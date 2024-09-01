@@ -25,3 +25,6 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+# the-chess-league-web
+The Chess Champion's league Web helps providing the UI for allowing all staff to participate and randomly manages the matches of all participants and compose a league of 3 matches a day and maximum 12 participants 
