@@ -1,4 +1,4 @@
-# Chess League Frontend
+# Chess League Web
 
 This project is the frontend for the Chess League application. It is built using Angular and interacts with a backend Java API to manage matches, participants, leagues, and champions.
 
@@ -13,8 +13,6 @@ This project is the frontend for the Chess League application. It is built using
 - [Environment Configuration](#environment-configuration)
 - [Deployment](#deployment)
 - [Testing](#testing)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Project Overview
 
@@ -32,22 +30,23 @@ To get started with the project locally, follow these steps:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/chess-league-frontend.git
-   cd chess-league-frontend
+   git clone https://github.com/yourusername/chess-league-web.git
+   cd chess-league-web
 
 2. **Install dependencies: Make sure you have Node.js and npm installed:**
    ```bash
    npm install
 
-3. **Running the Application:**
+## Running the Application
+
 To run the Angular application locally:
     ```bash
     ng serve
 
-4. **Project Structure**
+## Project Structure
 The project is organized as follows:
 
-chess-league-frontend/
+chess-league-web/
 │
 ├── src/
 │   ├── app/
@@ -65,7 +64,7 @@ chess-league-frontend/
 ├── README.md
 └── ...
 
-5. **API Integration**
+## API Integration
 The Angular application communicates with the backend via RESTful APIs. Services have been created to interact with the following endpoints:
 
 Matches: /api/v1/matches
@@ -73,7 +72,7 @@ Participants: /api/v1/participants
 Leagues: /api/v1/leagues
 Champions: /api/v1/champions
 
-6. **Environment Configuration**
+## Environment Configuration
 The environment-specific configurations can be found in the src/environments directory. The API base URL is defined here:
     
     ```bash
@@ -84,7 +83,7 @@ export const environment = {
 
 7. **For production, modify the API base URL in environment.prod.ts**
 
-Deployment
+## Deployment
 To deploy the application, build it for production:
 
    ```bash
@@ -92,7 +91,7 @@ ng build --prod
 
 The build artifacts will be stored in the dist/ directory. You can deploy this directory to any web server.
 
-Testing
+## Testing
 To run unit tests for the application:
     
     ```bash
