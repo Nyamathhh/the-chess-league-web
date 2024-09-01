@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ParticipantService } from '../../services/participant.service';
 
 @Component({
-  selector: 'app-participant-list',
+  selector: 'participant-list',
   templateUrl: './participant-list.component.html',
   styleUrls: ['./participant-list.component.css']
 })

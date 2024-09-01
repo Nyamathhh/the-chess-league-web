@@ -8,7 +8,7 @@ interface Match {
 }
 
 @Component({
-  selector: 'app-match-list',
+  selector: 'match-list',
   templateUrl: './match-list.component.html',
   styleUrls: ['./match-list.component.css']
 })
