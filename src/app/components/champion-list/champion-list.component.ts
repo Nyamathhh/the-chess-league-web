@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ChampionService } from '../../services/champion.service';
 
 @Component({
-  selector: 'champion-list',
+  selector: 'app-champion-list',
   templateUrl: './champion-list.component.html',
   styleUrls: ['./champion-list.component.css']
 })
