@@ -1,30 +1,101 @@
-# ChessLeagueWeb
+# Chess League Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.2.
+This project is the frontend for the Chess League application. It is built using Angular and interacts with a backend Java API to manage matches, participants, leagues, and champions.
 
-## Development server
+## Table of Contents
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Installation](#installation)
+- [Running the Application](#running-the-application)
+- [Project Structure](#project-structure)
+- [API Integration](#api-integration)
+- [Environment Configuration](#environment-configuration)
+- [Deployment](#deployment)
+- [Testing](#testing)
+- [Contributing](#contributing)
+- [License](#license)
 
-## Code scaffolding
+## Project Overview
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This project provides a web-based interface for managing chess leagues. The frontend is developed in Angular and consumes RESTful APIs provided by the backend Java application.
 
-## Build
+## Features
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- View a list of matches, participants, leagues, and champions.
+- Add, update, and delete matches.
+- Responsive design for both desktop and mobile devices.
 
-## Running unit tests
+## Installation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+To get started with the project locally, follow these steps:
 
-## Running end-to-end tests
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/yourusername/chess-league-frontend.git
+   cd chess-league-frontend
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+2. **Install dependencies: Make sure you have Node.js and npm installed:**
+   ```bash
+   npm install
 
-## Further help
+3. **Running the Application:**
+To run the Angular application locally:
+    ```bash
+    ng serve
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+4. **Project Structure**
+The project is organized as follows:
 
-# the-chess-league-web
-The Chess Champion's league Web helps providing the UI for allowing all staff to participate and randomly manages the matches of all participants and compose a league of 3 matches a day and maximum 12 participants 
+chess-league-frontend/
+│
+├── src/
+│   ├── app/
+│   │   ├── components/        # Contains Angular components
+│   │   ├── services/          # Contains Angular services
+│   │   ├── app-routing.module.ts
+│   │   ├── app.module.ts
+│   │   └── ...
+│   ├── assets/                # Static assets (images, fonts, etc.)
+│   ├── environments/          # Environment-specific configurations
+│   └── ...
+│
+├── angular.json
+├── package.json
+├── README.md
+└── ...
+
+5. **API Integration**
+The Angular application communicates with the backend via RESTful APIs. Services have been created to interact with the following endpoints:
+
+Matches: /api/v1/matches
+Participants: /api/v1/participants
+Leagues: /api/v1/leagues
+Champions: /api/v1/champions
+
+6. **Environment Configuration**
+The environment-specific configurations can be found in the src/environments directory. The API base URL is defined here:
+    
+    ```bash
+export const environment = {
+  production: false,
+  apiUrl: 'http://localhost:8080'
+};
+
+7. **For production, modify the API base URL in environment.prod.ts**
+
+Deployment
+To deploy the application, build it for production:
+
+   ```bash
+ng build --prod
+
+The build artifacts will be stored in the dist/ directory. You can deploy this directory to any web server.
+
+Testing
+To run unit tests for the application:
+    
+    ```bash
+ng test
+
+The tests are written using Jasmine and executed with Karma. Ensure that you write unit tests for each component and service.
