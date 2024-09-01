@@ -74,8 +74,7 @@ Champions: /api/v1/champions
 
 ## Environment Configuration
 The environment-specific configurations can be found in the src/environments directory. The API base URL is defined here:
-    
-    ```bash
+
 export const environment = {
   production: false,
   apiUrl: 'http://localhost:8080'
@@ -85,16 +84,14 @@ export const environment = {
 
 ## Deployment
 To deploy the application, build it for production:
-
-   ```bash
-ng build --prod
+   
+###### ng build --prod
 
 The build artifacts will be stored in the dist/ directory. You can deploy this directory to any web server.
 
 ## Testing
 To run unit tests for the application:
     
-    ```bash
-ng test
+###### ng test
 
 The tests are written using Jasmine and executed with Karma. Ensure that you write unit tests for each component and service.
