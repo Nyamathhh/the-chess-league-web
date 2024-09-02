@@ -1,22 +1,44 @@
+/* Container for the current champion section */
 .current-champion-container {
   font-family: Arial, sans-serif;
   margin: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Heading for the section */
 h2 {
-  color: #333;
+  color: #343a40;
+  font-size: 24px;
+  margin-bottom: 15px;
 }
 
+/* Container for the champion details */
 .current-champion {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 10px;
 }
 
+/* Champion name styling */
 .champion-name {
-  font-weight: bold;
+  font-weight: 600;
+  color: #333;
+  font-size: 18px;
 }
 
+/* Champion email styling */
 .champion-email {
   color: #555;
+  font-size: 14px;
+}
+
+/* Champion total wins styling */
+.champion-wins {
+  font-weight: 500;
+  color: #007bff;
+  font-size: 16px;
 }

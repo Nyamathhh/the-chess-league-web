@@ -1,22 +1,55 @@
+/* Main container for the whole application */
 .main-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
 }
 
-.header, .footer {
-  background-color: #f8f9fa;
-  padding: 10px;
+/* Header styling */
+.header {
+  background-color: #343a40;
+  color: white;
+  padding: 20px;
   text-align: center;
 }
 
+/* Navigation buttons styling */
+.button-group {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.button-group button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.button-group button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Main content area styling */
 .content {
   flex: 1;
   padding: 20px;
 }
 
-.divider {
-  height: 1px;
-  background-color: #e0e0e0;
-  margin: 20px 0;
+/* Footer styling */
+.footer {
+  background-color: #343a40;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
 }

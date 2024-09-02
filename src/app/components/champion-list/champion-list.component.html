@@ -1,6 +1,6 @@
-<div class="section">
+<div class="current-champion-container">
   <h2>Current Champion</h2>
-  <div *ngIf="currentChampion">
+  <div *ngIf="currentChampion" class="current-champion">
     <span class="champion-name">{{ currentChampion.name }}</span>
     <span class="champion-email">({{ currentChampion.email }})</span>
     <span class="champion-wins">Total Wins: {{ currentChampion.totalWins }}</span>

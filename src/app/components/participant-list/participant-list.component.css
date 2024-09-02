@@ -1,32 +1,56 @@
+/* Container for the participants list */
 .participants-container {
   font-family: Arial, sans-serif;
   margin: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 
+/* Heading for the section */
 h2 {
-  color: #333;
+  color: #343a40;
+  font-size: 24px;
+  margin-bottom: 15px;
 }
 
+/* Remove default list styles */
 ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
+/* Individual list item */
 li {
+  display: flex;
+  align-items: center;
   border-bottom: 1px solid #ddd;
-  padding: 10px 0;
+  padding: 12px 0;
+  transition: background-color 0.3s;
 }
 
+li:hover {
+  background-color: #f1f1f1;
+}
+
+/* Flex container for participant details */
 .participant-details {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
 }
 
+/* Name styling */
 .name {
-  font-weight: bold;
+  font-weight: 600;
+  color: #333;
+  font-size: 16px;
 }
 
+/* Email styling */
 .email {
   color: #555;
+  font-size: 14px;
 }

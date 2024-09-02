@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: 'matches', component: MatchListComponent },
   { path: 'participants', component: ParticipantListComponent },
   { path: 'leagues', component: LeagueListComponent },
-  { path: 'champions', component: ChampionListComponent },
+  { path: 'champion', component: ChampionListComponent },
   { path: '', redirectTo: '/matches', pathMatch: 'full' },  // Default route
   { path: '**', redirectTo: '/matches' }  // Wildcard route
 ];

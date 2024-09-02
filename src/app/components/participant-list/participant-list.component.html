@@ -1,8 +1,11 @@
-<div class="section">
+<div class="participants-container">
   <h2>Participants</h2>
   <ul>
     <li *ngFor="let participant of participants">
-      {{ participant.name }} ({{ participant.email }})
+      <div class="participant-details">
+        <span class="name">{{ participant.name }}</span>
+        <span class="email">({{ participant.email }})</span>
+      </div>
     </li>
   </ul>
 </div>

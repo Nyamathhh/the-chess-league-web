@@ -17,10 +17,9 @@ import { Router } from '@angular/router';
   imports: [RouterOutlet, LeagueListModule, ChampionListModule, MatchListModule, ParticipantListModule, CommonModule] 
 })
 export class AppComponent {
-  currentSection: string = 'matches'; 
+  constructor(private router: Router) { }
 
-  navigateTo(section: string) {
-    this.currentSection = section;
+  navigateTo(section: string): void {
+    this.router.navigate([section]);
   }
 }
-
