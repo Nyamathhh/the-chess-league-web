@@ -7,10 +7,19 @@ import { LeagueListModule } from './components/league-list/league-list.module';
 import { MatchListModule } from './components/match-list/match-list.module';
 import { ParticipantListModule } from './components/participant-list/participant-list.module';
 import { ChampionListModule } from './components/champion-list/champion-list.module';
+import { LeagueListComponent } from './components/league-list/league-list.component';
+import { MatchListComponent } from './components/match-list/match-list.component';
+import { ParticipantListComponent } from './components/participant-list/participant-list.component';
+import { ChampionListComponent } from './components/champion-list/champion-list.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LeagueListComponent,
+    MatchListComponent,
+    ParticipantListComponent,
+    ChampionListComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +28,8 @@ import { ChampionListModule } from './components/champion-list/champion-list.mod
     LeagueListModule,
     MatchListModule,
     ParticipantListModule,
-    ChampionListModule
+    ChampionListModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

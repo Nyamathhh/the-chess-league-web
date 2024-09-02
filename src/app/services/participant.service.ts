@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ParticipantService {
-  private baseUrl = '/api/v1/participants';
+  private baseUrl = 'http://localhost:8080/api/v1/participants';
 
   constructor(private http: HttpClient) { }
 

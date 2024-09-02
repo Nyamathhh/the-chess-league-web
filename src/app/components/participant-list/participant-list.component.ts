@@ -1,13 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { ParticipantService } from '../../services/participant.service';
 
+interface Participant {
+  name: string;
+  email: string;
+}
+
 @Component({
-  selector: 'app-participant-list',
+  selector: 'app-participants-list',
   templateUrl: './participant-list.component.html',
   styleUrls: ['./participant-list.component.css']
 })
 export class ParticipantListComponent implements OnInit {
-  participants: any[] = [];
+  participants: Participant[] = [];
 
   constructor(private participantService: ParticipantService) { }
 

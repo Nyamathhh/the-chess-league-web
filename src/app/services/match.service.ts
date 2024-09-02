@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class MatchService {
-  private baseUrl = '/api/v1/matches';
+  private baseUrl = 'http://localhost:8080/api/v1/matches';
 
   constructor(private http: HttpClient) { }
 

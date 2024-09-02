@@ -1,15 +1,26 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-// import { LeagueListComponent } from './components/league-list/league-list.component';
-// import { ChampionListComponent } from './components/champion-list/champion-list.component';
+import { LeagueListModule } from './components/league-list/league-list.module';
+import { ChampionListModule } from './components/champion-list/champion-list.module';
+import { MatchListModule } from './components/match-list/match-list.module';
+import { ParticipantListModule } from './components/participant-list/participant-list.module';
+import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   standalone: true,
   styleUrls: ['./app.component.css'],
-  imports: [RouterOutlet] 
+  imports: [RouterOutlet, LeagueListModule, ChampionListModule, MatchListModule, ParticipantListModule, CommonModule] 
 })
 export class AppComponent {
-  title = 'chess-league-web';
+  currentSection: string = 'matches'; 
+
+  navigateTo(section: string) {
+    this.currentSection = section;
+  }
 }
+

@@ -10,7 +10,8 @@ const routes: Routes = [
   { path: 'participants', component: ParticipantListComponent },
   { path: 'leagues', component: LeagueListComponent },
   { path: 'champions', component: ChampionListComponent },
-  { path: '', redirectTo: '/matches', pathMatch: 'full' }
+  { path: '', redirectTo: '/matches', pathMatch: 'full' },  // Default route
+  { path: '**', redirectTo: '/matches' }  // Wildcard route
 ];
 
 @NgModule({

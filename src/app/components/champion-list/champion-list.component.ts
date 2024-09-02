@@ -1,5 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ChampionService } from '../../services/champion.service';
+import { CommonModule } from '@angular/common';
+
+interface Champion {
+  id: number;
+  name: string;
+  email: string;
+  totalWins: number;
+}
 
 @Component({
   selector: 'app-champion-list',
@@ -7,13 +15,13 @@ import { ChampionService } from '../../services/champion.service';
   styleUrls: ['./champion-list.component.css']
 })
 export class ChampionListComponent implements OnInit {
-  champions: any[] = [];
+  currentChampion: Champion | null = null;
 
   constructor(private championService: ChampionService) { }
 
   ngOnInit(): void {
     this.championService.getCurrentChampion().subscribe(data => {
-      this.champions = [data];
+      this.currentChampion = data;
     });
   }
 }

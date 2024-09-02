@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ChampionService {
-  private baseUrl = '/api/v1/champions';
+  private baseUrl = 'http://localhost:8080/api/v1/champions';
 
   constructor(private http: HttpClient) { }
 

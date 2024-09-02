@@ -1,13 +1,32 @@
-div {
-    padding: 20px;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  li {
-    margin-bottom: 10px;
-  }
-  
+.leagues-container {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h2 {
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.league-details {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.league-name {
+  font-weight: bold;
+}
+
+.league-count {
+  color: #555;
+}

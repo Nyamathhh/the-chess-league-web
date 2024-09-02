@@ -1,25 +1,18 @@
-<main class="main-container">
+<div class="container">
+  <h1>The Chess Champion's League</h1>
 
-  <header class="header">
-    <h1>The Chess Champion's League</h1>
-  </header>
-
-  <div class="content">
-    <app-match-list></app-match-list>
-
-    <div class="divider"></div>
-
-    <app-participant-list></app-participant-list>
-
-    <div class="divider"></div>
-
-    <app-league-list></app-league-list>
-
-    <div class="divider"></div>
-
-    <app-champion-list></app-champion-list>
+  <div class="button-group">
+    <button (click)="navigateTo('matches')">Matches</button>
+    <button (click)="navigateTo('participants')">Participants</button>
+    <button (click)="navigateTo('leagues')">Leagues</button>
+    <button (click)="navigateTo('champion')">Current Champion</button>
   </div>
-  <footer class="footer">
-    <p>&copy; The Chess Champion's League 2024</p>
-  </footer>
-</main>
+
+  <div [ngSwitch]="currentSection">
+    <app-matches-list *ngSwitchCase="'matches'"></app-matches-list>
+    <app-participants-list *ngSwitchCase="'participants'"></app-participants-list>
+    <app-leagues-list *ngSwitchCase="'leagues'"></app-leagues-list>
+    <app-champion-list *ngSwitchCase="'champion'"></app-champion-list>
+    <div *ngSwitchDefault>Select a section</div>
+  </div>
+</div>

@@ -1,10 +1,8 @@
-<div>
-    <h2>Current Champion</h2>
-    <div *ngIf="champions.length">
-      <p>{{ champions[0].name }} ({{ champions[0].title }})</p>
-    </div>
-    <div *ngIf="!champions.length">
-      <p>No champion currently</p>
-    </div>
+<div class="section">
+  <h2>Current Champion</h2>
+  <div *ngIf="currentChampion">
+    <span class="champion-name">{{ currentChampion.name }}</span>
+    <span class="champion-email">({{ currentChampion.email }})</span>
+    <span class="champion-wins">Total Wins: {{ currentChampion.totalWins }}</span>
   </div>
-  
+</div>

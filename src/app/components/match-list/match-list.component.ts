@@ -2,13 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { MatchService } from '../../services/match.service';
 
 interface Match {
-  id: number;
-  name: string;
-  date: string;
+  participant1Name: string;
+  participant2Name: string;
+  winnerName: string;
+  leagueName: string;
+  matchDate: string;
 }
 
 @Component({
-  selector: 'app-match-list',
+  selector: 'app-matches-list',
   templateUrl: './match-list.component.html',
   styleUrls: ['./match-list.component.css']
 })
@@ -18,7 +20,7 @@ export class MatchListComponent implements OnInit {
   constructor(private matchService: MatchService) { }
 
   ngOnInit(): void {
-    this.matchService.getMatches().subscribe((data: Match[]) => {
+    this.matchService.getMatches().subscribe(data => {
       this.matches = data;
     });
   }

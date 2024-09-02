@@ -1,8 +1,22 @@
-div {
-    padding: 20px;
-  }
-  
-  p {
-    font-weight: bold;
-  }
-  
+.current-champion-container {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h2 {
+  color: #333;
+}
+
+.current-champion {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.champion-name {
+  font-weight: bold;
+}
+
+.champion-email {
+  color: #555;
+}
