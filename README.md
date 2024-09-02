@@ -43,6 +43,10 @@ To run the Angular application locally:
     ```bash
     ng serve
 
+
+![application](./images/application.png)
+
+
 ## Project Structure
 The project is organized as follows:
 
