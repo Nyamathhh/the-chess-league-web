@@ -42,38 +42,38 @@ export class MatchesComponent implements OnInit {
     this.router.navigate([`/matches/${id}`]);
   }
 
-  editMatch(id: number): void {
-    this.router.navigate([`/matches/update/${id}`]);
-  }
-
   // editMatch(id: number): void {
-  //   // Assuming you want to navigate to an edit page, uncomment the line below
-  //   // this.router.navigate([`/matches/update/${id}`]);
-  
-  //   if (confirm('Are you sure you want to Edit this match?')) {
-  //     // Fetch the match details before updating
-  //     this.matchService.getMatch(id).subscribe({
-  //       next: (match) => {
-  //         // Proceed to update the match with new values
-  //         const updatedMatch = { ...match, /* modify match details here as needed */ };
-  //         this.matchService.updateMatch(id, updatedMatch).subscribe({
-  //           next: () => {
-  //             // You may want to update the list or navigate to another page
-  //             this.matches = this.matches.map(m => m.id === id ? updatedMatch : m);
-  //           },
-  //           error: (err) => {
-  //             this.error = 'Failed to update match. Please try again later.';
-  //             console.error('Error updating match:', err);
-  //           }
-  //         });
-  //       },
-  //       error: (err) => {
-  //         this.error = 'Failed to fetch match details. Please try again later.';
-  //         console.error('Error fetching match:', err);
-  //       }
-  //     });
-  //   }
+  //   this.router.navigate([`/matches/update/${id}`]);
   // }
+
+  editMatch(id: number): void {
+    // Assuming you want to navigate to an edit page, uncomment the line below
+    // this.router.navigate([`/matches/update/${id}`]);
+  
+    if (confirm('Are you sure you want to Edit this match?')) {
+      // Fetch the match details before updating
+      this.matchService.getMatch(id).subscribe({
+        next: (match) => {
+          // Proceed to update the match with new values
+          const updatedMatch = { ...match, /* modify match details here as needed */ };
+          this.matchService.updateMatch(id, updatedMatch).subscribe({
+            next: () => {
+              // You may want to update the list or navigate to another page
+              this.matches = this.matches.map(m => m.id === id ? updatedMatch : m);
+            },
+            error: (err) => {
+              this.error = 'Failed to update match. Please try again later.';
+              console.error('Error updating match:', err);
+            }
+          });
+        },
+        error: (err) => {
+          this.error = 'Failed to fetch match details. Please try again later.';
+          console.error('Error fetching match:', err);
+        }
+      });
+    }
+  }
   
 
   deleteMatch(id: number): void {
