@@ -32,3 +32,9 @@
   font-style: italic;
   margin-top: 5px;
 }
+
+/* Winner styles */
+.winner {
+  color: green;
+  font-weight: bold;
+}

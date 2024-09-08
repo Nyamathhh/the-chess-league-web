@@ -1,0 +1,33 @@
+<div class="main-container">
+    <header class="header">
+      <h1>Match Management</h1>
+    </header>
+  
+    <nav class="button-group">
+      <button (click)="navigateTo('/matches')">Matches</button>
+      <button (click)="navigateTo('/matches/create')">Create Match</button>
+    </nav>
+  
+    <main class="content">
+      <section class="matches-management">
+  
+        <div class="match-list">
+          <div class="match-card" *ngFor="let match of matches">
+            <h3>{{ match.participant1Name }} vs {{ match.participant2Name }}</h3>
+            <p><strong>Winner:</strong> {{ match.winnerName }}</p>
+            <p><strong>League:</strong> {{ match.leagueName }}</p>
+            <p><strong>Date:</strong> {{ match.matchDate }}</p>
+            <div class="actions">
+              <button (click)="editMatch(match.id)">Edit</button>
+              <button (click)="deleteMatch(match.id)">Delete</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  
+    <footer class="footer">
+      <p>&copy; 2024 The Chess Champion's League</p>
+    </footer>
+  </div>
+  

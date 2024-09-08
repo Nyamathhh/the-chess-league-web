@@ -4,7 +4,8 @@
       {{ match.participant1Name }} vs {{ match.participant2Name }}
     </div>
     <div class="match-details">
-      Winner: {{ match.winnerName }}
+      
+      <span class="winner">Winner: {{ match.winnerName }}</span>
       <span class="match-league">League: {{ match.leagueName }}</span>
       <span class="match-date">Date: {{ match.matchDate | date: 'MMM d, yyyy' }}</span>
     </div>

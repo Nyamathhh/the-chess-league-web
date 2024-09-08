@@ -3,16 +3,18 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f0f4f8, #e2e6ea);
+  color: #333;
 }
 
 /* Header styling */
 .header {
-  background-color: #343a40;
-  color: white;
+  background-color: #004080; /* Dark blue for a professional look */
+  color: #fff;
   padding: 20px;
   text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Navigation buttons styling */
@@ -25,31 +27,82 @@
 .button-group button {
   background-color: #007bff;
   border: none;
-  color: white;
-  padding: 10px 20px;
-  margin: 0 10px;
-  border-radius: 5px;
+  color: #fff;
+  padding: 12px 24px;
+  margin: 0 8px;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 16px;
-  transition: background-color 0.3s, transform 0.2s;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .button-group button:hover {
   background-color: #0056b3;
   transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button-group button:active {
+  background-color: #003d7a;
 }
 
 /* Main content area styling */
 .content {
   flex: 1;
   padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Match card styling */
+.match-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.match-card h3 {
+  color: #004080;
+}
+
+.match-card p {
+  margin: 8px 0;
+  color: #555;
+}
+
+.match-card .actions button {
+  background-color: #28a745; /* Green for action buttons */
+  border: none;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.match-card .actions button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.match-card .actions button:focus {
+  outline: none;
 }
 
 /* Footer styling */
 .footer {
-  background-color: #343a40;
-  color: white;
-  padding: 10px;
+  background-color: #004080;
+  color: #fff;
+  padding: 12px;
   text-align: center;
   font-size: 14px;
 }

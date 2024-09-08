@@ -1,0 +1,24 @@
+<form (ngSubmit)="updateMatch()">
+    <label>
+      Participant 1 Name:
+      <input [(ngModel)]="match.participant1Name" name="participant1Name" required />
+    </label>
+    <label>
+      Participant 2 Name:
+      <input [(ngModel)]="match.participant2Name" name="participant2Name" required />
+    </label>
+    <label>
+      Winner Name:
+      <input [(ngModel)]="match.winnerName" name="winnerName" />
+    </label>
+    <label>
+      League Name:
+      <input [(ngModel)]="match.leagueName" name="leagueName" />
+    </label>
+    <label>
+      Match Date:
+      <input [(ngModel)]="match.matchDate" name="matchDate" type="date" />
+    </label>
+    <button type="submit">Update Match</button>
+  </form>
+  
